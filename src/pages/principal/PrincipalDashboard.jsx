@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { getAllContent, getPendingContent } from '../../services/content.service';
-import { approveContent } from '../../services/approval.service';
+import { getAllContent } from '../../services/content.service';
+import { approveContent, getPendingContent } from '../../services/approval.service';
 import { DashboardCard, StatusBadge, SkeletonLoader, Button } from '../../components/ui';
 import { formatDate } from '../../utils/dateHelpers';
 import { FileText, Clock, CheckCircle, XCircle, Check } from 'lucide-react';
