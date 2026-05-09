@@ -1,6 +1,6 @@
-import { mockContent } from '../data/mockData';
+import { mockContent } from "../data/mockData";
 
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 /**
  * Gets pending content
@@ -8,7 +8,7 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
  */
 export const getPendingContent = async () => {
   await delay(800);
-  return mockContent.filter(c => c.status === 'pending');
+  return mockContent.filter((c) => c.status === "pending");
 };
 
 /**
@@ -18,9 +18,9 @@ export const getPendingContent = async () => {
  */
 export const approveContent = async (id) => {
   await delay(1000);
-  const item = mockContent.find(c => c.id === id);
-  if (!item) throw new Error('Content not found');
-  item.status = 'approved';
+  const item = mockContent.find((c) => c.id === id);
+  if (!item) throw new Error("Content not found");
+  item.status = "approved";
   item.updatedAt = new Date().toISOString();
   return item;
 };
@@ -33,9 +33,9 @@ export const approveContent = async (id) => {
  */
 export const rejectContent = async (id, reason) => {
   await delay(1000);
-  const item = mockContent.find(c => c.id === id);
-  if (!item) throw new Error('Content not found');
-  item.status = 'rejected';
+  const item = mockContent.find((c) => c.id === id);
+  if (!item) throw new Error("Content not found");
+  item.status = "rejected";
   item.rejectionReason = reason;
   item.updatedAt = new Date().toISOString();
   return item;

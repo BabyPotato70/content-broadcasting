@@ -1,10 +1,15 @@
-export const DashboardCard = ({ icon: Icon, label, value, color = 'primary' }) => {
+export const DashboardCard = ({
+  icon: Icon,
+  label,
+  value,
+  color = "primary",
+}) => {
   const colors = {
-    primary: 'bg-primary-100 text-primary-600',
-    green: 'bg-green-100 text-green-600',
-    red: 'bg-red-100 text-red-600',
-    yellow: 'bg-yellow-100 text-yellow-600',
-    gray: 'bg-gray-100 text-gray-600'
+    primary: "bg-primary-100 text-primary-600",
+    green: "bg-green-100 text-green-600",
+    red: "bg-red-100 text-red-600",
+    yellow: "bg-yellow-100 text-yellow-600",
+    gray: "bg-gray-100 text-gray-600",
   };
 
   return (

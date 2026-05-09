@@ -1,5 +1,5 @@
-import { InboxIcon } from 'lucide-react';
-import { Button } from './Button';
+import { InboxIcon } from "lucide-react";
+import { Button } from "./Button";
 
 export const EmptyState = ({ title, description, actionLabel, onAction }) => (
   <div className="flex flex-col items-center justify-center py-12 text-center">

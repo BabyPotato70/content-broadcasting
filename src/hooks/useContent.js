@@ -1,6 +1,6 @@
-import { useState, useCallback } from 'react';
-import * as contentService from '../services/content.service';
-import toast from 'react-hot-toast';
+import { useState, useCallback } from "react";
+import * as contentService from "../services/content.service";
+import toast from "react-hot-toast";
 
 export const useContent = () => {
   const [data, setData] = useState([]);
@@ -37,10 +37,10 @@ export const useContent = () => {
     setLoading(true);
     try {
       const result = await contentService.uploadContent(contentData);
-      toast.success('Content uploaded successfully!');
+      toast.success("Content uploaded successfully!");
       return result;
     } catch (err) {
-      toast.error('Upload failed. Please try again.');
+      toast.error("Upload failed. Please try again.");
       throw err;
     } finally {
       setLoading(false);

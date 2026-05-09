@@ -1,6 +1,6 @@
-import { useState, useCallback } from 'react';
-import * as approvalService from '../services/approval.service';
-import toast from 'react-hot-toast';
+import { useState, useCallback } from "react";
+import * as approvalService from "../services/approval.service";
+import toast from "react-hot-toast";
 
 export const useApproval = () => {
   const [data, setData] = useState([]);
@@ -23,20 +23,20 @@ export const useApproval = () => {
   const approve = async (id) => {
     try {
       await approvalService.approveContent(id);
-      setData(prev => prev.filter(item => item.id !== id));
-      toast.success('Content approved successfully!');
+      setData((prev) => prev.filter((item) => item.id !== id));
+      toast.success("Content approved successfully!");
     } catch (err) {
-      toast.error('Failed to approve content.');
+      toast.error("Failed to approve content.");
     }
   };
 
   const reject = async (id, reason) => {
     try {
       await approvalService.rejectContent(id, reason);
-      setData(prev => prev.filter(item => item.id !== id));
-      toast.success('Content rejected.');
+      setData((prev) => prev.filter((item) => item.id !== id));
+      toast.success("Content rejected.");
     } catch (err) {
-      toast.error('Failed to reject content.');
+      toast.error("Failed to reject content.");
     }
   };
 
