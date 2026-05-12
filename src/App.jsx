@@ -11,7 +11,6 @@ import { DashboardLayout } from "./components/layout/DashboardLayout";
 import { Spinner } from "./components/ui";
 import { Toaster } from "react-hot-toast";
 
-// Lazy Load Pages
 const LoginPage = lazy(() =>
   import("./pages/auth/LoginPage").then((m) => ({ default: m.LoginPage })),
 );

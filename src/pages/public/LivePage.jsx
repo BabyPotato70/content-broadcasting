@@ -23,8 +23,8 @@ export const LivePage = () => {
   };
 
   useEffect(() => {
-    fetchLive(); // Initial load
-    const interval = setInterval(fetchLive, 30000); // Auto-refresh 30s
+    fetchLive();
+    const interval = setInterval(fetchLive, 30000);
     return () => clearInterval(interval);
   }, [teacherId]);
 
@@ -46,7 +46,7 @@ export const LivePage = () => {
     );
   }
 
-  const activeItem = content[0]; // Show the first active item full screen
+  const activeItem = content[0];
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
