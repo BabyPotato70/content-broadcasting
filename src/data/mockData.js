@@ -1,7 +1,7 @@
 const teachers = [
   {
     id: "t1",
-    name: "Ms. Carter",
+    name: "Ms. Teacher",
     email: "teacher@school.com",
     role: "teacher",
   },
@@ -10,7 +10,7 @@ const teachers = [
 
 const principal = {
   id: "p1",
-  name: "Dr. Adams",
+  name: "Mr. Principal",
   email: "principal@school.com",
   role: "principal",
 };
