@@ -11,7 +11,7 @@ export const DashboardLayout = () => {
       <Navbar onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <main className="lg:ml-64 pt-16 min-h-screen">
-        <div className="p-6 max-w-7xl mx-auto">
+        <div className="p-5 max-w-7xl mx-auto">
           <Outlet />
         </div>
       </main>
