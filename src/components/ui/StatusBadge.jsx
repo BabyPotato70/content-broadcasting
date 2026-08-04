@@ -13,6 +13,6 @@ export const StatusBadge = ({ status }) => (
   <span
     className={`px-2 py-1 text-xs font-medium rounded-full ${statusColors[status] || "bg-gray-100"}`}
   >
-    {status}
+    {status.charAt(0).toUpperCase() + status.slice(1)}
   </span>
 );
